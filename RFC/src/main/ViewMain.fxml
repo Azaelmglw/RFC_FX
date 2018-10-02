@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root_vbox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../assets/SOConsole.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="top_section_hbox" prefHeight="50.0" prefWidth="600.0" styleClass="background_2" VBox.vgrow="NEVER" />
+      <HBox fx:id="working_area_hbox" alignment="CENTER_LEFT" prefHeight="300.0" prefWidth="600.0" styleClass="background_4" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox fx:id="middle_left_section_vbox" alignment="CENTER_LEFT" prefHeight="300.0" prefWidth="400.0" HBox.hgrow="NEVER">
+               <children>
+                  <HBox fx:id="first_field_hbox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Label fx:id="first_name_lbl" prefWidth="125.0" styleClass="description_label" text="First Name/s:" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="15.0" right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="first_name_tfield" alignment="CENTER" styleClass="input_field" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="second_field_hbox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="135.0" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Label fx:id="middle_name_lbl" prefWidth="125.0" styleClass="description_label" text="Middle Name:" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="15.0" right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="middle_name_tfield" alignment="CENTER" styleClass="input_field" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="third_field_hbox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="110.0" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="last_name_lbl" prefWidth="125.0" styleClass="description_label" text="Last Name:" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="15.0" right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="last_name_tfield" alignment="CENTER" styleClass="input_field" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="fourth_field_hbox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="85.0" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="birth_date_lbl" prefWidth="125.0" styleClass="description_label" text="Birth Date:" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="15.0" right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <DatePicker fx:id="birth_date_dpicker" editable="false" prefHeight="25.0" prefWidth="239.0" HBox.hgrow="NEVER" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="middle_right_section_vbox" alignment="CENTER" prefHeight="300.0" prefWidth="200.0" styleClass="vbox_1" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="rfc_lbl" styleClass="description_label" text="RFC" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="rfc_result_lbl" layoutX="87.0" layoutY="143.0" styleClass="description_label" text="Generated RFC" />
+               </children>
+            </VBox>
+         </children></HBox>
+      <HBox fx:id="bottom_section_hbox" prefHeight="50.0" prefWidth="600.0" styleClass="background" VBox.vgrow="NEVER">
+         <children>
+            <VBox fx:id="bottom_left_section_vbox" alignment="CENTER" prefHeight="50.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="generate_btn" blendMode="SRC_ATOP" cacheHint="QUALITY" depthTest="ENABLE" mnemonicParsing="false" onAction="#GenerateRfc" prefWidth="100.0" styleClass="quick_menu_button" text="Generate" />
+               </children></VBox>
+            <VBox fx:id="bottom_right_section_vbox" alignment="CENTER" prefHeight="50.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="clear_btn" blendMode="SRC_ATOP" cacheHint="QUALITY" mnemonicParsing="false" onAction="#ClearInputFields" prefWidth="100.0" styleClass="quick_menu_button" text="Clear" />
+               </children></VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
